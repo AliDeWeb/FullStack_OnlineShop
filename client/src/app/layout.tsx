@@ -16,12 +16,14 @@ const poppins = Poppins({
   weight: ["300", "400", "600"],
   style: ["normal"],
   variable: "--font-poppins",
+  subsets: ["latin"],
 });
 const montserrat = Montserrat({
   display: "swap",
   weight: ["800"],
   style: ["normal"],
   variable: "--font-montserrat",
+  subsets: ["latin"],
 });
 
 export default function RootLayout({
