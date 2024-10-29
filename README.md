@@ -95,3 +95,7 @@ We welcome contributions from developers interested in enhancing OnlineShop. Her
 
 6. Submit a Pull Request
    Go to the original repository and submit a pull request from your branch. Please provide a clear description of the changes you made and any issues or features your code addresses.
+
+## Notice ❌
+
+If you're running the project using docker, you can edit server environment variables from **`server/Dockerfile`**, in the **Envs** section.
