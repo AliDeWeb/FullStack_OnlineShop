@@ -7,8 +7,13 @@ import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 
 // Components
-import { Header } from "@/components/Header/Header";
-import { MobileToolBar } from "@/components/MobileToolBar/MobileToolBar";
+import { HamburgerMenu } from "@/components/HamburgerMenu/HamburgerMenu.component";
+import { Header } from "@/components/Header/Header.component";
+import { MobileToolBar } from "@/components/MobileToolBar/MobileToolBar.component";
+import { Overlay } from "@/components/Overlay/Overlay.component";
+
+// Contexts
+import { OpenModalProvider } from "@/contexts/Modals/Modals.context";
 
 // Fonts
 const poppins = Poppins({
@@ -34,10 +39,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${montserrat.variable} min-h-dvh`}>
-        <Header />
-        <MobileToolBar />
+        <OpenModalProvider>
+          <Header />
+          <MobileToolBar />
+          <HamburgerMenu />
+          <Overlay />
 
-        {children}
+          {children}
+        </OpenModalProvider>
       </body>
     </html>
   );

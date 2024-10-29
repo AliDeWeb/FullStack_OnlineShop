@@ -1,8 +1,13 @@
+"use client";
+
+import Link from "next/link";
 import React from "react";
 
 // Icons
 import { Heart, House, Menu, ShoppingCart, User } from "lucide-react";
-import Link from "next/link";
+
+// Contexts
+import { useOpenModal } from "@/contexts/Modals/Modals.context";
 
 const Counter = ({ count }: { count: number }): React.ReactNode => {
   return (
@@ -13,9 +18,16 @@ const Counter = ({ count }: { count: number }): React.ReactNode => {
 };
 
 export const MobileToolBar = (): React.ReactNode => {
+  const { setOpenModal } = useOpenModal();
+
+  const handleMenuBtn = React.useCallback(() => {
+    setOpenModal("HamburgerMenu");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="container fixed inset-x-0 bottom-0 flex items-center justify-evenly bg-white py-6 sm:hidden">
-      <button type="button">
+      <button type="button" onClick={handleMenuBtn}>
         <Menu size={"1.6rem"} color="#555555" />
       </button>
 
