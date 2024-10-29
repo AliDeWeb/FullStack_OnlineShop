@@ -1,12 +1,30 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 // Contexts
 import { useOpenModal } from "@/contexts/Modals/Modals.context";
 
 // Icons
-import { X } from "lucide-react";
+import { ChevronRight, X } from "lucide-react";
+
+const HamburgerMenuItems = ({
+  title,
+  link,
+}: {
+  title: string;
+  link: string;
+}): React.ReactNode => {
+  return (
+    <div className="flex cursor-pointer items-center justify-between px-1 py-2 text-[#444444] transition-all hover:scale-105">
+      <span>{title}</span>
+      <Link href={`/${link}`}>
+        <ChevronRight size={"1rem"} color="#555555" />
+      </Link>
+    </div>
+  );
+};
 
 export const HamburgerMenu = (): React.ReactNode => {
   const { OpenModal, setOpenModal } = useOpenModal();
@@ -28,6 +46,12 @@ export const HamburgerMenu = (): React.ReactNode => {
         <button type="button" onClick={handleCloseBtn}>
           <X size={"1.4rem"} color="#555555" />
         </button>
+      </div>
+      <div className="divide-y divide-solid divide-[#eeeeee] font-poppins">
+        <HamburgerMenuItems link="/" title="Home" />
+        <HamburgerMenuItems link="/" title="Categories" />
+        <HamburgerMenuItems link="/" title="Products" />
+        <HamburgerMenuItems link="/" title="Blog" />
       </div>
     </div>
   );
