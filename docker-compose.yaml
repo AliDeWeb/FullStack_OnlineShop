@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  client:
+    build: "./client"
+    ports:
+      - "3001:3000"
+    depends_on:
+      - server
+      - db
+    networks:
+      - bridge
+
+  server:
+    build: "./server"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - bridge
+    environment:
+      - DATABASE=mongodb://db:27017/shop
+      - NODE_ENV=dev
+
+  db:
+    image: "mongo:latest"
+    ports:
+      - "27017:27017"
+    volumes:
+      - "db:/data/db"
+      - "config:/data/configdb"
+    networks:
+      - bridge
+
+volumes:
+  db:
+  config:
+
+networks:
+  bridge:
+    driver: "bridge"
