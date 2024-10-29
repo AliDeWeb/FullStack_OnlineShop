@@ -26,7 +26,7 @@ export const MobileToolBar = (): React.ReactNode => {
   }, []);
 
   return (
-    <div className="container fixed inset-x-0 bottom-0 flex items-center justify-evenly bg-white py-6 sm:hidden">
+    <div className="container fixed inset-x-0 bottom-0 flex items-center justify-evenly border-t border-solid border-[#eeeeee] bg-white py-6 sm:hidden">
       <button type="button" onClick={handleMenuBtn}>
         <Menu size={"1.6rem"} color="#555555" />
       </button>
