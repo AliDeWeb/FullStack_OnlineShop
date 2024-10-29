@@ -1,15 +1,21 @@
-import type { Metadata } from "next";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Ekka - Not Found !",
-};
+import React from "react";
 
 export default function NotFound() {
+  const pageViewElem = React.useRef<HTMLDivElement | null>(null);
+
+  React.useEffect(() => {
+    document.title = "Ekka - Not Found !";
+
+    if (pageViewElem?.current) pageViewElem.current.scrollIntoView();
+  }, []);
+
   return (
     <div
+      ref={pageViewElem}
       className={
         "container flex h-dvh flex-col items-center justify-center text-center font-poppins"
       }
