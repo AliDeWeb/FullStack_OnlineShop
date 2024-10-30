@@ -1,7 +1,7 @@
 import React from "react";
 
 // Fonts
-import { Montserrat, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 
 // Styles
 import "./globals.css";
@@ -16,19 +16,32 @@ import { Overlay } from "@/components/Overlay/Overlay.component";
 import { OpenModalProvider } from "@/contexts/Modals/Modals.context";
 
 // Fonts
-const poppins = Poppins({
+const poppins = localFont({
   display: "swap",
-  weight: ["300", "400", "600"],
-  style: ["normal"],
+  src: [
+    {
+      path: "../../public/fonts/Poppins/Poppins-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Poppins/Poppins-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Poppins/Poppins-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-poppins",
-  subsets: ["latin"],
 });
-const montserrat = Montserrat({
+const montserrat = localFont({
   display: "swap",
-  weight: ["800"],
-  style: ["normal"],
+  src: "../../public/fonts/Montserrat/Montserrat-Bold.ttf",
+  weight: "700",
   variable: "--font-montserrat",
-  subsets: ["latin"],
 });
 
 export default function RootLayout({
