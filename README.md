@@ -22,8 +22,8 @@ The project is developed by Ali Moradi using **Nextjs**, **Nestjs**, **Mongodb**
 
 ### You can access to
 
-- Client => on port 3001
-- Server => on port 3000
+- Client => on port 3000
+- Server => on port 3001
 - DB => on port 27017
 
 ## Installation using npm 🥈

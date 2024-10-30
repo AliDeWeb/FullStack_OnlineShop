@@ -1,10 +1,8 @@
-version: "3.8"
-
 services:
   client:
     build: "./client"
     ports:
-      - "3001:3000"
+      - "3000:3000"
     depends_on:
       - server
       - db
@@ -14,7 +12,7 @@ services:
   server:
     build: "./server"
     ports:
-      - "3000:3000"
+      - "3001:3000"
     depends_on:
       - db
     networks:
