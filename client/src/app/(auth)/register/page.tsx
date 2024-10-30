@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Login = async () => {
   return (
-    <div className="flex h-dvh flex-col items-center justify-center">
+    <div className="flex min-h-dvh flex-col items-center justify-center py-10">
       <h1 className="text-center font-montserrat text-3xl font-bold text-[#555555]">
         Register
       </h1>
