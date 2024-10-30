@@ -64,6 +64,8 @@ export class AuthService {
     if (isAnyUserExistWithThisPhoneNumber?.isBanned)
       throw new ForbiddenException('you have already banned');
 
+    console.log(isAnyUserExistWithThisPhoneNumber);
+
     const isPasswordCorrect = await bcrypt.compare(
       loginUserData.password,
       isAnyUserExistWithThisPhoneNumber.password,
