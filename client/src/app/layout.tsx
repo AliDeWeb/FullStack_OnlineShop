@@ -14,6 +14,7 @@ import { Overlay } from "@/components/Overlay/Overlay.component";
 
 // Contexts
 import { OpenModalProvider } from "@/contexts/Modals/Modals.context";
+import { Metadata } from "next";
 
 // Fonts
 const poppins = localFont({
@@ -43,6 +44,13 @@ const montserrat = localFont({
   weight: "700",
   variable: "--font-montserrat",
 });
+
+export const metadata: Metadata = {
+  title: {
+    default: "Ekka Shop",
+    template: "Ekka - %s",
+  },
+};
 
 export default function RootLayout({
   children,

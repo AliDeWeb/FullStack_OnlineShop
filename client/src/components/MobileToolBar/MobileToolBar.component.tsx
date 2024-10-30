@@ -45,7 +45,7 @@ export const MobileToolBar = (): React.ReactNode => {
         <Counter count={65} />
       </Link>
 
-      <Link href={"/"}>
+      <Link href={"/register"}>
         <User size={"1.6rem"} color="#555555" />
       </Link>
     </div>
