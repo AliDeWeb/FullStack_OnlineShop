@@ -20,10 +20,7 @@ export class UserRepository {
   }
 
   async findUserByPhoneNumber(phoneNumber: string): Promise<User | null> {
-    return this.userModel
-      .findOne({ phoneNumber })
-      .populate('addresses')
-      .select('-password -passwordUpdatedAt');
+    return this.userModel.findOne({ phoneNumber }).populate('addresses');
   }
 
   async findUserByEmail(email: string): Promise<User | null> {

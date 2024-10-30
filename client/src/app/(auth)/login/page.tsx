@@ -22,15 +22,15 @@ const Login = async () => {
         action={LoginAction}
         className="my-10 flex w-[300px] flex-col border border-solid border-[#eeeeee] px-10 py-9 font-poppins md:w-[500px]"
       >
-        <label className="text-[#444444]" htmlFor="email">
-          Email Address *
+        <label className="text-[#444444]" htmlFor="phone">
+          Phone Number *
         </label>
         <input
           className="mb-9 mt-2.5 h-[40px] border border-solid border-[#eeeeee] px-4 text-sm text-[#777777] outline-none"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          type="email"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+          type="text"
         />
         <label className="text-[#444444]" htmlFor="password">
           Password *

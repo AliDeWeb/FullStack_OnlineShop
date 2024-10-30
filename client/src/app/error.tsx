@@ -13,8 +13,6 @@ export default function Error({
   const pageViewElem = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
-    document.title = "Ekka - Not Found !";
-
     if (pageViewElem?.current) pageViewElem.current.scrollIntoView();
   }, []);
 
