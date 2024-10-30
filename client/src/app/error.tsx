@@ -1,16 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
-export default function NotFound() {
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
   const pageViewElem = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
     document.title = "Ekka - Not Found !";
 
     if (pageViewElem?.current) pageViewElem.current.scrollIntoView();
+  }, []);
+
+  const handleRetry = React.useCallback(() => {
+    reset();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -28,14 +38,14 @@ export default function NotFound() {
         src={"/icons/not-found.png"}
       />
       <h2 className={"text-2xl font-bold text-[#444444] md:text-3xl"}>
-        Oops, Page is lost.
+        Oops, Something went wrong !
       </h2>
       <p className={"my-1 mb-2 text-sm text-[#777777] md:text-lg"}>
-        This is not a fault, just an accident that was not intentional.
+        {error.message}
       </p>
-      <Link className={"text-sm text-red-600"} href="/">
-        Return Home
-      </Link>
+      <button className="text-red-600" type="button" onClick={handleRetry}>
+        Retry ...
+      </button>
     </div>
   );
 }

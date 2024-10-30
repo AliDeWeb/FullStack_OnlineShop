@@ -3,6 +3,10 @@
 // import { permanentRedirect } from "next/navigation";
 
 export async function LoginAction(formData: FormData) {
+  const [email, password] = [formData.get("email"), formData.get("password")];
+
+  if (!email || !password) throw new Error("no no no");
+
   // * Must Change
 
   const promise = () =>
