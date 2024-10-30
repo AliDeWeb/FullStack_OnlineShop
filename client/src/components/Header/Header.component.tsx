@@ -39,7 +39,7 @@ export const Header = (): React.ReactNode => {
         </div>
 
         <div className="hidden grid-cols-3 gap-8 lg:grid">
-          <Link href={"/"}>
+          <Link href={"/register"}>
             <User size={"1.5rem"} color="#444444" />
           </Link>
           <button className="relative" type="button">
