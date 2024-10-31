@@ -3,9 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-// Contexts
-import { useBrowserInfo } from "@/contexts/infos/BrowserInfo.context";
+import { A11y, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 interface ProductBoxProps {
   title: string;
@@ -31,7 +30,10 @@ export const ProductBox = ({
         %{discount}
       </span>
 
-      <Link href={`products/${link}`}>
+      <Link
+        className="flex items-center justify-center"
+        href={`products/${link}`}
+      >
         <Image
           height={450}
           width={450}
@@ -92,23 +94,45 @@ interface ProductsSectionProps {
 export const ProductsSection = ({
   products,
 }: ProductsSectionProps): React.ReactNode => {
-  const { BrowserInfo } = useBrowserInfo();
-
-  const [numberOfProducts] = React.useState(
-    BrowserInfo.width > 1440
-      ? 12
-      : BrowserInfo.width > 1024
-        ? 8
-        : BrowserInfo.width > 768
-          ? 6
-          : 2,
-  );
-
   return (
-    <div className="mt-5 grid grid-cols-1 justify-items-center gap-x-2 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {products.slice(0, numberOfProducts).map((el) => (
-        <ProductBox {...el} key={`${el.title}/${el.link}/${el.cover}`} />
+    <Swiper
+      loop
+      modules={[A11y, Autoplay]}
+      slidesPerView={0.6}
+      spaceBetween={15}
+      autoplay={{
+        delay: 2500,
+        pauseOnMouseEnter: true,
+      }}
+      breakpoints={{
+        375: {
+          slidesPerView: 1,
+        },
+        425: {
+          slidesPerView: 1.2,
+        },
+        768: {
+          slidesPerView: 2.1,
+        },
+        1024: {
+          slidesPerView: 2.9,
+        },
+        1280: {
+          slidesPerView: 3.9,
+        },
+        1440: {
+          slidesPerView: 4.2,
+        },
+      }}
+    >
+      {products.map((el) => (
+        <SwiperSlide
+          className="px-5 py-10"
+          key={`${el.title}/${el.link}/${el.cover}`}
+        >
+          <ProductBox {...el} />
+        </SwiperSlide>
       ))}
-    </div>
+    </Swiper>
   );
 };

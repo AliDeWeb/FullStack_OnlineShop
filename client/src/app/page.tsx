@@ -31,22 +31,6 @@ const products = [
     link: "/",
     discount: 20,
   },
-  {
-    title: "Cute Baby Toy's",
-    cover: "/images/products/01.jpg",
-    price: 25.0,
-    rate: 4,
-    link: "/",
-    discount: 20,
-  },
-  {
-    title: "Clasic Baby Shoes",
-    cover: "/images/products/01.jpg",
-    price: 25.0,
-    rate: 4,
-    link: "/",
-    discount: 20,
-  },
 ];
 
 export default function Home() {
