@@ -1,6 +1,8 @@
 import React from "react";
 
 // Fonts
+import type { Metadata } from "next";
+
 import localFont from "next/font/local";
 
 // Styles
@@ -10,11 +12,11 @@ import "./globals.css";
 import { HamburgerMenu } from "@/components/HamburgerMenu/HamburgerMenu.component";
 import { Header } from "@/components/Header/Header.component";
 import { MobileToolBar } from "@/components/MobileToolBar/MobileToolBar.component";
+import { Navbar } from "@/components/Navbar/Navbar.component";
 import { Overlay } from "@/components/Overlay/Overlay.component";
 
 // Contexts
 import { OpenModalProvider } from "@/contexts/Modals/Modals.context";
-import { Metadata } from "next";
 
 // Fonts
 const poppins = localFont({
@@ -62,6 +64,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${montserrat.variable} min-h-dvh`}>
         <OpenModalProvider>
           <Header />
+          <Navbar />
           <MobileToolBar />
           <HamburgerMenu />
           <Overlay />
