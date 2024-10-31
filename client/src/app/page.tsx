@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
+
 // Components
 import { BannerSlider } from "@/components/BannerSlider/BannerSlider.component";
 import { Navbar } from "@/components/Navbar/Navbar.component";
 import { ProductsSection } from "@/components/ProductsSection/ProductsSection.component";
 import { SectionWrapper } from "@/components/SectionWrapper/SectionWrapper.component";
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 // Metadata
