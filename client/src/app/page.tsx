@@ -5,6 +5,8 @@ import { BannerSlider } from "@/components/BannerSlider/BannerSlider.component";
 import { Navbar } from "@/components/Navbar/Navbar.component";
 import { ProductsSection } from "@/components/ProductsSection/ProductsSection.component";
 import { SectionWrapper } from "@/components/SectionWrapper/SectionWrapper.component";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 // Metadata
 export const metadata: Metadata = {
@@ -17,10 +19,10 @@ const images = [
   { link: "/", src: "/banners/home-page/01.png" },
 ];
 const NavbarItems: { link: string; title: string }[] = [
-  { link: "/?products=all", title: "for all" },
-  { link: "/?products=men", title: "for men" },
-  { link: "/?products=women", title: "for women" },
-  { link: "/?products=children", title: "for children" },
+  { link: "/products", title: "for men" },
+  { link: "/products", title: "for women" },
+  { link: "/products", title: "for all" },
+  { link: "/products", title: "for children" },
 ];
 const products = [
   {
@@ -85,6 +87,15 @@ export default function Home() {
           <Navbar items={NavbarItems} />
 
           <ProductsSection products={products} />
+          <div className="flex items-center justify-center">
+            <Link
+              className="inline-flex items-center gap-1 font-montserrat text-sm font-bold text-[#777777] transition-all hover:scale-105"
+              href="/products"
+            >
+              Explore the shop
+              <ChevronRight size={16} />
+            </Link>
+          </div>
         </div>
       </SectionWrapper>
     </div>
