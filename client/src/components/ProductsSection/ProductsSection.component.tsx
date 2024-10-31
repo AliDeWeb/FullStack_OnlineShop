@@ -80,7 +80,7 @@ export const ProductBox = ({
             </span>
           )}
           <span className="font-montserrat font-bold text-[#555555]">
-            ${!discount ? price : ((100 - discount) / 100) * price}
+            ${!discount ? price : (((100 - discount) / 100) * price).toFixed(2)}
           </span>
         </div>
       </div>
