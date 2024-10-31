@@ -26,7 +26,7 @@ export const ProductBox = ({
   const rateFloor = React.useRef(Math.floor(rate));
 
   return (
-    <div className="relative flex h-[462px] w-[312px] flex-col justify-between rounded-md border border-solid border-[#eeeeee] p-2.5 shadow-lg md:h-[492px] md:w-[340px] lg:h-[438px] lg:w-[320px] xl:h-[410px] xl:w-[290px] 2xl:h-[470px] 2xl:w-[350px]">
+    <div className="relative col-span-1 flex h-[462px] w-[312px] flex-col justify-between rounded-md border border-solid border-[#eeeeee] p-2.5 shadow-lg md:h-[492px] md:w-[340px] lg:h-[438px] lg:w-[320px] xl:h-[410px] xl:w-[290px] 2xl:h-[470px] 2xl:w-[350px]">
       <span className="absolute left-0 top-8 z-10 flex h-[24px] w-[42px] items-center justify-center rounded-e-xl bg-[#ff6285] font-poppins text-xs font-normal text-white">
         %{discount}
       </span>
@@ -47,23 +47,25 @@ export const ProductBox = ({
         </h4>
 
         <div className="flex items-center gap-1 text-[#ff6262]">
-          {new Array(rateFloor.current).fill(0).map(() => (
+          {new Array(rateFloor.current).fill(0).map((_, index) => (
             <Image
               height={24}
               width={24}
               alt="icon"
               className="size-3"
-              key={`${Math.random}`}
+              // eslint-disable-next-line @eslint-react/no-array-index-key
+              key={`fill-${index}`}
               src={"/icons/fill-star.png"}
             />
           ))}
-          {new Array(5 - rateFloor.current).fill(0).map(() => (
+          {new Array(5 - rateFloor.current).fill(0).map((_, index) => (
             <Image
               height={24}
               width={24}
               alt="icon"
               className="size-3"
-              key={`${Math.random}`}
+              // eslint-disable-next-line @eslint-react/no-array-index-key
+              key={`fill-${index}`}
               src={"/icons/empty-star.png"}
             />
           ))}
@@ -103,9 +105,9 @@ export const ProductsSection = ({
   );
 
   return (
-    <div className="mt-5 grid grid-cols-1 grid-rows-2 justify-items-center gap-x-2 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="mt-5 grid grid-cols-1 justify-items-center gap-x-2 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {products.slice(0, numberOfProducts).map((el) => (
-        <ProductBox {...el} key={`${Math.random()}`} />
+        <ProductBox {...el} key={`${el.title}/${el.link}/${el.cover}`} />
       ))}
     </div>
   );
