@@ -20,8 +20,18 @@ export const BrowserInfoProvider = ({
   children: React.ReactNode;
 }) => {
   const [BrowserInfo, setBrowserInfoContext] = React.useState<BrowserInfo>({
-    width: window.innerWidth,
+    width: 0,
   });
+
+  React.useEffect(() => {
+    setBrowserInfoContext({ width: window.innerWidth });
+
+    const handleResize = () =>
+      setBrowserInfoContext({ width: window.innerWidth });
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const value = React.useMemo(
     () => ({ BrowserInfo, setBrowserInfoContext }),
