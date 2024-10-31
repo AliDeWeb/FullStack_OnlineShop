@@ -23,6 +23,7 @@ export const Header = (): React.ReactNode => {
             height={40}
             width={130}
             alt="not-found-icon"
+            className="h-10 w-[130px]"
             src={"/icons/header-icon.png"}
           />
         </div>
