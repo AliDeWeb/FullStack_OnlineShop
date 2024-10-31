@@ -1,16 +1,5 @@
 import React from "react";
 
-// Components
-import { Navbar } from "../Navbar/Navbar.component";
-
-// Data
-const NavbarItems: { link: string; title: string }[] = [
-  { link: "/", title: "for all" },
-  { link: "/", title: "for men" },
-  { link: "/", title: "for women" },
-  { link: "/", title: "for children" },
-];
-
 interface SectionWrapperProps {
   children: React.ReactNode;
 
@@ -28,8 +17,6 @@ export const SectionWrapper = ({
         {title}
       </h2>
       <p className="mt-2.5 text-center text-sm text-[#777777]">{description}</p>
-
-      <Navbar items={NavbarItems} />
 
       {children}
     </div>

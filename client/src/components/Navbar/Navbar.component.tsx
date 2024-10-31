@@ -1,4 +1,4 @@
-import { ArrowDownNarrowWide, Divide, Grip } from "lucide-react";
+import { ArrowDownNarrowWide, Grip } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
