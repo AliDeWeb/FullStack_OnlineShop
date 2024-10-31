@@ -25,7 +25,7 @@ export const Overlay = (): React.ReactNode => {
 
   return (
     <div
-      className={`${OpenModal !== "" ? "visible opacity-100" : "invisible opacity-0"} fixed inset-0 z-10 h-dvh w-full bg-black/60 backdrop-blur-sm transition-all`}
+      className={`${OpenModal !== "" ? "visible opacity-100" : "invisible opacity-0"} fixed inset-0 z-40 h-dvh w-full bg-black/60 backdrop-blur-sm transition-all`}
       role="button"
       tabIndex={0}
       onClick={handleOverlayClick}

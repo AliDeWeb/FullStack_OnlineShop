@@ -18,6 +18,7 @@ import { Navbar } from "@/components/Navbar/Navbar.component";
 import { Overlay } from "@/components/Overlay/Overlay.component";
 
 // Contexts
+import { BrowserInfoProvider } from "@/contexts/infos/BrowserInfo.context";
 import { OpenModalProvider } from "@/contexts/Modals/Modals.context";
 
 // Fonts
@@ -74,15 +75,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${montserrat.variable} min-h-dvh`}>
+      <body
+        className={`${poppins.variable} ${montserrat.variable} mb-20 min-h-dvh`}
+      >
         <OpenModalProvider>
-          <Header />
-          <Navbar mainNav items={NavbarItems} />
-          <MobileToolBar />
-          <HamburgerMenu />
-          <Overlay />
-
-          {children}
+          <BrowserInfoProvider>
+            <Header />
+            <Navbar mainNav items={NavbarItems} />
+            <MobileToolBar />
+            <HamburgerMenu />
+            <Overlay />
+            {children}
+          </BrowserInfoProvider>
         </OpenModalProvider>
       </body>
     </html>
