@@ -56,6 +56,17 @@ export const metadata: Metadata = {
   },
 };
 
+// Data
+const NavbarItems: { link: string; title: string }[] = [
+  { link: "/", title: "home" },
+  { link: "/", title: "categories" },
+  { link: "/", title: "products" },
+  { link: "/", title: "pages" },
+  { link: "/", title: "others" },
+  { link: "/", title: "blog" },
+  { link: "/", title: "hot offers" },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,7 +77,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${montserrat.variable} min-h-dvh`}>
         <OpenModalProvider>
           <Header />
-          <Navbar />
+          <Navbar mainNav items={NavbarItems} />
           <MobileToolBar />
           <HamburgerMenu />
           <Overlay />

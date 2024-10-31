@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 // Components
 import { BannerSlider } from "@/components/BannerSlider/BannerSlider.component";
+import { SectionWrapper } from "@/components/SectionWrapper/SectionWrapper.component";
 
 // Metadata
 export const metadata: Metadata = {
@@ -18,6 +19,12 @@ export default function Home() {
   return (
     <div>
       <BannerSlider images={images} slidesPerView={1} spaceBetween={1} />
+      <SectionWrapper
+        description="Browse The Collection of Top Products"
+        title="Our Top Collection"
+      >
+        <div></div>
+      </SectionWrapper>
     </div>
   );
 }
