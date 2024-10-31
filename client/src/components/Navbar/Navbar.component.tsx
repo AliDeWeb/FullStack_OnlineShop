@@ -4,7 +4,7 @@ import React from "react";
 
 export const Navbar = (): React.ReactNode => {
   return (
-    <nav className="hidden h-[50px] items-center rounded-b-3xl shadow-xl lg:flex">
+    <nav className="relative z-20 hidden h-[50px] items-center rounded-b-3xl shadow-xl lg:flex">
       <div className="container flex items-center justify-between">
         <span className="cursor-pointer text-[#444444]">
           <Grip height={"20"} width={"20"} />

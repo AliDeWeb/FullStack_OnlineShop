@@ -7,6 +7,8 @@ import localFont from "next/font/local";
 
 // Styles
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/navigation";
 
 // Components
 import { HamburgerMenu } from "@/components/HamburgerMenu/HamburgerMenu.component";
