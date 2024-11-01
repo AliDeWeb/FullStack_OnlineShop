@@ -75,7 +75,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${montserrat.variable} min-h-dvh`}>
+      <body
+        className={`${poppins.variable} ${montserrat.variable} mb-20 min-h-dvh sm:mb-0`}
+      >
         <OpenModalProvider>
           <Header />
           <Navbar mainNav items={NavbarItems} />

@@ -25,7 +25,7 @@ const NavbarItems: { link: string; title: string }[] = [
   { link: "/products", title: "for all" },
   { link: "/products", title: "for children" },
 ];
-export const products = [
+const products = [
   {
     title: "Canvas Shoes for Boy",
     cover: "/images/products/01.jpg",
