@@ -14,7 +14,86 @@ export default (): React.ReactNode => {
         <span className="mb-[30px] flex h-[50px] w-full items-center border border-solid border-[#eeeeee] p-4 font-montserrat font-bold text-[#777777]">
           Filter Products By
         </span>
+
+        <div className="border border-solid border-[#eeeeee] p-4">
+          <div>
+            <span className="font-montserrat font-bold text-[#555555]">
+              Category
+            </span>
+            <form className="mt-4 flex flex-col gap-2 font-poppins text-sm font-normal text-[#777777]">
+              <div className="flex items-center gap-2 pl-2">
+                <input id="clothes" type="checkbox" />
+                <label htmlFor="clothes">Clothes</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="bags" type="checkbox" />
+                <label htmlFor="bags">Bags</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="shoes" type="checkbox" />
+                <label htmlFor="shoes">Shoes</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="electrics" type="checkbox" />
+                <label htmlFor="electrics">Electrics</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="phone" type="checkbox" />
+                <label htmlFor="phone">Phone</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="laptop" type="checkbox" />
+                <label htmlFor="laptop">Laptop</label>
+              </div>
+            </form>
+          </div>
+
+          <span className="my-4 block w-full border-b border-solid border-[#eeeeee]"></span>
+
+          <div>
+            <span className="font-montserrat font-bold text-[#555555]">
+              Size
+            </span>
+            <form className="mt-4 flex flex-col gap-2 font-poppins text-sm font-normal text-[#777777]">
+              <div className="flex items-center gap-2 pl-2">
+                <input id="S" type="checkbox" />
+                <label htmlFor="S">S</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="M" type="checkbox" />
+                <label htmlFor="M">M</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="L" type="checkbox" />
+                <label htmlFor="L">L</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="XL" type="checkbox" />
+                <label htmlFor="XL">XL</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="XXL" type="checkbox" />
+                <label htmlFor="XXL">XXL</label>
+              </div>
+
+              <div className="flex items-center gap-2 pl-2">
+                <input id="XXXL" type="checkbox" />
+                <label htmlFor="XXXL">XXXL</label>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+
       <div className="col-span-4 xl:col-span-3">
         <div className="mb-[30px] flex h-[50px] w-full items-center justify-between border border-solid border-[#eeeeee] p-4 font-montserrat font-bold text-[#777777]">
           <span className="flex size-[34px] cursor-pointer items-center justify-center rounded-sm border border-solid border-[#eeeeee] bg-[#3474d4] text-white">
