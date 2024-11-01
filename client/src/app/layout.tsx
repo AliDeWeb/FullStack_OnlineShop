@@ -73,10 +73,13 @@ export default function RootLayout({
         <OpenModalProvider>
           <Header />
           <Navbar mainNav items={NavbarItems} />
-          <MobileToolBar />
-          <HamburgerMenu />
-          <Overlay />
-          {children}
+
+          <main>
+            <MobileToolBar />
+            <HamburgerMenu />
+            <Overlay />
+            {children}
+          </main>
 
           <Footer />
         </OpenModalProvider>

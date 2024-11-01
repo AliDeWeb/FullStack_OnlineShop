@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -22,7 +20,7 @@ export const ProductBox = ({
   link,
   discount,
 }: ProductBoxProps): React.ReactNode => {
-  const rateFloor = React.useRef(Math.floor(rate));
+  const rateFloor = Math.floor(rate);
 
   return (
     <div className="relative col-span-1 flex h-[462px] w-[312px] flex-col justify-between rounded-md border border-solid border-[#eeeeee] p-2.5 shadow-lg md:h-[492px] md:w-[340px] lg:h-[438px] lg:w-[320px] xl:h-[410px] xl:w-[290px] 2xl:h-[470px] 2xl:w-[350px]">
@@ -49,7 +47,7 @@ export const ProductBox = ({
         </h4>
 
         <div className="flex items-center gap-1 text-[#ff6262]">
-          {new Array(rateFloor.current).fill(0).map((_, index) => (
+          {new Array(rateFloor).fill(0).map((_, index) => (
             <Image
               height={24}
               width={24}
@@ -60,7 +58,7 @@ export const ProductBox = ({
               src={"/icons/fill-star.png"}
             />
           ))}
-          {new Array(5 - rateFloor.current).fill(0).map((_, index) => (
+          {new Array(5 - rateFloor).fill(0).map((_, index) => (
             <Image
               height={24}
               width={24}

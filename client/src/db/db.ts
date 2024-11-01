@@ -23,12 +23,11 @@ export const ProductsNavbarItems: { link: string; title: string }[] = [
 export const products = [
   {
     id: 1,
-    title: "Canvas Shoes for Boy",
+    title: "Unisex Cotton Neck Hoodie",
     cover: "/images/products/01.jpg",
     price: 25.0,
     rate: 4,
-    link: `products/1`,
-    discount: 20,
+    link: `1`,
   },
   {
     id: 2,
@@ -36,7 +35,7 @@ export const products = [
     cover: "/images/products/02.jpg",
     price: 27.0,
     rate: 3,
-    link: "products/2",
+    link: "2",
     discount: 20,
   },
   {
@@ -45,7 +44,7 @@ export const products = [
     cover: "/images/products/03.jpg",
     price: 40,
     rate: 5,
-    link: "products/3",
+    link: "3",
     discount: 50,
   },
   {
@@ -54,7 +53,7 @@ export const products = [
     cover: "/images/products/04.jpg",
     price: 12,
     rate: 5,
-    link: "products/4",
+    link: "4",
     discount: 80,
   },
   {
@@ -63,7 +62,7 @@ export const products = [
     cover: "/images/products/05.jpg",
     price: 100,
     rate: 2,
-    link: "products/5",
+    link: "5",
     discount: 20,
   },
   {
@@ -72,7 +71,7 @@ export const products = [
     cover: "/images/products/06.jpg",
     price: 15,
     rate: 4,
-    link: "products/6",
+    link: "6",
     discount: 38,
   },
 ];
