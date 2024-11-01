@@ -6,6 +6,8 @@ import React from "react";
 import { A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { ProductRate } from "../ProductRate/ProductRate.component";
+
 interface ProductBoxProps {
   title: string;
   cover: string;
@@ -48,30 +50,7 @@ export const ProductBox = ({
           <Link href={`products/${link}`}>{title}</Link>
         </h4>
 
-        <div className="flex items-center gap-1 text-[#ff6262]">
-          {new Array(rateFloor.current).fill(0).map((_, index) => (
-            <Image
-              height={24}
-              width={24}
-              alt="icon"
-              className="size-3"
-              // eslint-disable-next-line @eslint-react/no-array-index-key
-              key={`fill-${index}`}
-              src={"/icons/fill-star.png"}
-            />
-          ))}
-          {new Array(5 - rateFloor.current).fill(0).map((_, index) => (
-            <Image
-              height={24}
-              width={24}
-              alt="icon"
-              className="size-3"
-              // eslint-disable-next-line @eslint-react/no-array-index-key
-              key={`fill-${index}`}
-              src={"/icons/empty-star.png"}
-            />
-          ))}
-        </div>
+        <ProductRate rate={rateFloor.current} />
 
         <div className="mt-2 flex items-center gap-2 text-sm">
           {discount && (

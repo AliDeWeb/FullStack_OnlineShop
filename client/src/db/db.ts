@@ -20,7 +20,15 @@ export const ProductsNavbarItems: { link: string; title: string }[] = [
   { link: "/products", title: "for children" },
 ];
 
-export const products = [
+export const products: {
+  id: number;
+  title: string;
+  cover: string;
+  price: number;
+  rate: number;
+  link: string;
+  discount?: number;
+}[] = [
   {
     id: 1,
     title: "Unisex Cotton Neck Hoodie",
