@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  ::-webkit-scrollbar {
+    width: 0.5vw;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#eeeeee];
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-[#3474d4]/40 hover:bg-[#3474d4]/70 active:bg-[#3474d4];
+  }
+
   :root {
     scroll-behavior: smooth;
 
