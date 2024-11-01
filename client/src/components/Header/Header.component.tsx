@@ -18,14 +18,16 @@ export const Header = (): React.ReactNode => {
     <header className="border-b border-solid border-[#eeeeee] py-3 sm:py-5 lg:py-8">
       <div className="container flex flex-col items-center justify-between gap-6 sm:flex-row sm:gap-0">
         <div>
-          <Image
-            priority
-            height={40}
-            width={130}
-            alt="not-found-icon"
-            className="h-10 w-[130px]"
-            src={"/icons/header-icon.png"}
-          />
+          <Link href={"/"}>
+            <Image
+              priority
+              height={40}
+              width={130}
+              alt="not-found-icon"
+              className="h-10 w-[130px]"
+              src={"/icons/header-icon.png"}
+            />
+          </Link>
         </div>
 
         <div className="flex w-[300px] items-center justify-between border border-solid border-[#3474d4] pr-5 lg:w-[500px]">
