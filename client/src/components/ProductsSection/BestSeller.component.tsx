@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -18,7 +20,7 @@ export const BestSeller = ({
   link,
   discount,
 }: BestSellerProps): React.ReactNode => {
-  const rateFloor = Math.floor(rate);
+  const rateFloor = React.useRef(Math.floor(rate));
 
   return (
     <div className="grid h-[130px] w-[320px] grid-cols-3 items-center gap-3 rounded-sm bg-[#777777]/5 p-4">
@@ -39,7 +41,7 @@ export const BestSeller = ({
           <Link href={`products/${link}`}>{title}</Link>
         </h4>
         <div className="flex items-center gap-1 text-[#ff6262]">
-          {new Array(rateFloor).fill(0).map((_, index) => (
+          {new Array(rateFloor.current).fill(0).map((_, index) => (
             <Image
               height={24}
               width={24}
@@ -50,7 +52,7 @@ export const BestSeller = ({
               src={"/icons/fill-star.png"}
             />
           ))}
-          {new Array(5 - rateFloor).fill(0).map((_, index) => (
+          {new Array(5 - rateFloor.current).fill(0).map((_, index) => (
             <Image
               height={24}
               width={24}
