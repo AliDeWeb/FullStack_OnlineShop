@@ -37,7 +37,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/PWA/screenshot-narrow.png",
         form_factor: "narrow",
         type: "image/png",
-        sizes: "312x671",
+        sizes: "425x778",
       },
     ],
   };
