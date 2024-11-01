@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 
 import localFont from "next/font/local";
 
+// Data
+import { NavbarItems } from "@/db/db";
+
 // Styles
 import "./globals.css";
 import "swiper/css";
@@ -56,17 +59,6 @@ export const metadata: Metadata = {
     template: "Ekka - %s",
   },
 };
-
-// Data
-const NavbarItems: { link: string; title: string }[] = [
-  { link: "/", title: "home" },
-  { link: "/", title: "categories" },
-  { link: "/", title: "products" },
-  { link: "/", title: "pages" },
-  { link: "/", title: "others" },
-  { link: "/", title: "blog" },
-  { link: "/", title: "hot offers" },
-];
 
 export default function RootLayout({
   children,

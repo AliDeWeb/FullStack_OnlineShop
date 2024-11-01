@@ -5,56 +5,7 @@ import React from "react";
 import { ChevronRight, LayoutGrid } from "lucide-react";
 
 // Data
-const products = [
-  {
-    title: "Canvas Shoes for Boy",
-    cover: "/images/products/01.jpg",
-    price: 25.0,
-    rate: 4,
-    link: "/",
-    discount: 20,
-  },
-  {
-    title: "Round Neck T-Shirt",
-    cover: "/images/products/02.jpg",
-    price: 27.0,
-    rate: 3,
-    link: "/",
-    discount: 20,
-  },
-  {
-    title: "Cute Baby Toy's",
-    cover: "/images/products/03.jpg",
-    price: 40,
-    rate: 5,
-    link: "/",
-    discount: 50,
-  },
-  {
-    title: "Canvas Cowboy Hat",
-    cover: "/images/products/04.jpg",
-    price: 12,
-    rate: 5,
-    link: "/",
-    discount: 80,
-  },
-  {
-    title: "Digital Smart Watches",
-    cover: "/images/products/05.jpg",
-    price: 100,
-    rate: 2,
-    link: "/",
-    discount: 20,
-  },
-  {
-    title: "Leather Belt for Men",
-    cover: "/images/products/06.jpg",
-    price: 15,
-    rate: 4,
-    link: "/",
-    discount: 38,
-  },
-];
+import { products } from "@/db/db";
 
 export default (): React.ReactNode => {
   return (
