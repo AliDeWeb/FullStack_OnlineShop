@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // Components
+import { RegisterServiceWorker } from "@/app/RegisterServiceWorker";
 import { HamburgerMenu } from "@/components/HamburgerMenu/HamburgerMenu.component";
 import { Header } from "@/components/Header/Header.component";
 import { MobileToolBar } from "@/components/MobileToolBar/MobileToolBar.component";
@@ -77,6 +78,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${montserrat.variable} mb-20 min-h-dvh`}
       >
+        <RegisterServiceWorker />
         <OpenModalProvider>
           <Header />
           <Navbar mainNav items={NavbarItems} />
