@@ -44,7 +44,7 @@ export const ProductBox = ({
       </Link>
 
       <div>
-        <h4 className="relative z-20 font-poppins text-lg font-normal text-[#777777] transition-all">
+        <h4 className="relative z-20 font-poppins text-lg font-normal text-[#777777] transition-all hover:text-[#3474d4]">
           <Link href={`products/${link}`}>{title}</Link>
         </h4>
 
