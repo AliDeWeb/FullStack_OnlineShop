@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // Components
+import { Footer } from "@/components/Footer/Footer.component";
 import { HamburgerMenu } from "@/components/HamburgerMenu/HamburgerMenu.component";
 import { Header } from "@/components/Header/Header.component";
 import { MobileToolBar } from "@/components/MobileToolBar/MobileToolBar.component";
@@ -74,9 +75,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} ${montserrat.variable} mb-20 min-h-dvh`}
-      >
+      <body className={`${poppins.variable} ${montserrat.variable} min-h-dvh`}>
         <OpenModalProvider>
           <Header />
           <Navbar mainNav items={NavbarItems} />
@@ -84,6 +83,8 @@ export default function RootLayout({
           <HamburgerMenu />
           <Overlay />
           {children}
+
+          <Footer />
         </OpenModalProvider>
       </body>
     </html>
