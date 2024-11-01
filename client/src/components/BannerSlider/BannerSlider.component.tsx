@@ -26,7 +26,7 @@ export const BannerSlider = ({
       slidesPerView={slidesPerView || 1}
       spaceBetween={spaceBetween || 50}
       autoplay={{
-        delay: 2500,
+        delay: 4000,
         pauseOnMouseEnter: true,
       }}
     >

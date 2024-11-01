@@ -101,7 +101,7 @@ export const ProductsSection = ({
       slidesPerView={0.6}
       spaceBetween={15}
       autoplay={{
-        delay: 2500,
+        delay: 4000,
         pauseOnMouseEnter: true,
       }}
       breakpoints={{
